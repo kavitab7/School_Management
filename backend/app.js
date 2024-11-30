@@ -7,6 +7,9 @@ app.use(express.json())
 
 //school routes
 app.use('/api', schoolRoutes)
+app.get('/', (req, res) => {
+    res.send('Project is running...');
+});
 
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
